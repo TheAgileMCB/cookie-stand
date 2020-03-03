@@ -3,7 +3,7 @@ console.log('ready to rock');
 
 /////////////////////Global Variables//////////////////////
 var hours = ['6:00am','7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12:00pm', '1:00pm', '2:00pm', '3:00pm', '4:00pm', '5:00pm', '6:00pm', '7:00pm'];
-
+var stores = [Seattle, Tokyo, Dubai, Paris, Lima];
 /////////////////////Constructor////////////////////////
 function Store(minCustomers, maxCustomers, unitsPerCustomer) {
   this.minCustomers = minCustomers;
@@ -57,4 +57,24 @@ console.log(Lima.customersPerHour);
 console.log(Lima.cookiesPerHour);
 
 ///////////////////////Render////////////////////////////////
+var storeTable = document.getElementById('sales-table');
+var headRow = document.createElement('tr');
+for ( let i = 0; i < hours.length; i++ ) {
+  var hourHead = document.createElement('th');
+  hourHead.setAttribute('scope', 'col');
+  hourHead.textContent = hours[i];
+  headRow.appendChild(hourHead);
+  storeTable.appendChild(headRow);
+}
 
+Store.prototype.render = function() {
+  
+
+
+
+  
+};
+
+for( let i = 0; i < stores.length; i++ ) {
+  stores[i].render();
+}
