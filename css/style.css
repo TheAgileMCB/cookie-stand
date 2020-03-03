@@ -1,0 +1,53 @@
+body {
+  background: linear-gradient(to bottom right, rgba(233, 144, 133, 1), rgba(188, 89, 40, 0.8));
+  color: #FFFFFF;
+}
+
+header {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+header h1 {
+color: #FFFFFF;
+font-size: 3.5em;
+}
+
+header nav ul li {
+  display: inline-block;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+#sales-main section, #sales-main p, #sales-main ul {
+  border: dotted 2px #FFFFFF;
+}
+
+#sales-main p {
+  padding: 8px;
+}
+
+#sales-main li {
+  border-bottom: dotted 2px #FFFFFF;
+  padding: 4px 8px;
+  text-align: center;
+}
+
+#sales-main section {
+  display: inline-block;
+}
+
+h2 {
+  color: #FFFFFF;
+  font-size: 2.5em;
+  text-align: center;
+}
+h3 {
+  font-size: 2em;
+}
+
+footer {
+  margin-top: 30px;
+  text-align: center;
+}
