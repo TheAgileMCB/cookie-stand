@@ -174,7 +174,7 @@ section3.appendChild(salmonParagraph2);
 var salmonUl2 = document.createElement('ul');
 section3.appendChild(salmonUl2);
 
-for (var j = 0; j <= hours.length; j ++) {
+for (var j = 0; j < hours.length; j ++) {
   var salmonLi2 = document.createElement('li');
   salmonLi2.textContent = Seattle.avgCookieHour[j];
   salmonUl2.appendChild(salmonLi2);
@@ -224,11 +224,11 @@ section6.appendChild(salmonParagraph2);
 var salmonUl2 = document.createElement('ul');
 section6.appendChild(salmonUl2);
 
-for (var n = 0; n <= hours.length; n ++) {
+for (var n = 0; n < hours.length; n ++) {
   var salmonLi2 = document.createElement('li');
   salmonLi2.textContent = Tokyo.avgCookieHour[n];
   salmonUl2.appendChild(salmonLi2);
-
+}
 
 /////////////////Dubai/////////////////////////////
 var section7 = document.createElement('section');
@@ -274,11 +274,11 @@ section9.appendChild(salmonParagraph2);
 var salmonUl2 = document.createElement('ul');
 section9.appendChild(salmonUl2);
 
-for (var q = 0; q <= hours.length; q ++) {
+for (var q = 0; q < hours.length; q ++) {
   var salmonLi2 = document.createElement('li');
   salmonLi2.textContent = Dubai.avgCookieHour[q];
   salmonUl2.appendChild(salmonLi2);
-
+}
 
 ///////////////////Paris/////////////////////////
 var section10 = document.createElement('section');
@@ -324,11 +324,11 @@ section12.appendChild(salmonParagraph2);
 var salmonUl2 = document.createElement('ul');
 section12.appendChild(salmonUl2);
 
-for (var t = 0; t <= hours.length; t ++) {
+for (var t = 0; t < hours.length; t ++) {
   var salmonLi2 = document.createElement('li');
   salmonLi2.textContent = Paris.avgCookieHour[t];
   salmonUl2.appendChild(salmonLi2);
-
+}
 
 ///////////////////Lima///////////////////////////
 var section13 = document.createElement('section');
@@ -374,7 +374,8 @@ section15.appendChild(salmonParagraph2);
 var salmonUl2 = document.createElement('ul');
 section15.appendChild(salmonUl2);
 
-for (var w = 0; w <= hours.length; w ++) {
+for (var w = 0; w < hours.length; w ++) {
   var salmonLi2 = document.createElement('li');
   salmonLi2.textContent = Lima.avgCookieHour[w];
   salmonUl2.appendChild(salmonLi2);
+};
