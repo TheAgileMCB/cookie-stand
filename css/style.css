@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(to bottom right, rgba(233, 144, 133, 1), rgba(188, 89, 40, 0.8));
+  background: linear-gradient(to bottom right, rgb(179, 24, 3), rgba(188, 89, 40, 1), rgb(160, 101, 72), rgba(188, 89, 40, 1));
   color: #FFFFFF;
 }
 
@@ -7,11 +7,12 @@ header {
   margin-top: 30px;
   margin-bottom: 30px;
   text-align: center;
+  font-size: 1.5rem;
 }
 
 header h1 {
 color: #FFFFFF;
-font-size: 3.5em;
+font-size: 4.5rem;
 }
 
 header nav ul li {
@@ -20,9 +21,21 @@ header nav ul li {
   margin-top: 20px;
 }
 
+#main-content {
+  text-align: center;
+}
+
+#sales-main {
+  text-align: center;
+  font-size: 1.25em;
+  background-color: rgb(129, 49, 9);
+  border-radius: 30px;
+  border: solid 6px rgba(201, 165, 7, 0.925);
+  padding: 10px 20px 30px 20px;
+}
+
 #sales-main section, #sales-main p, #sales-main ul {
-  border: dotted 2px #FFFFFF;
-  margin: auto 0;
+  border: solid 2px #FFFFFF;
 }
 
 #sales-main p {
@@ -30,7 +43,7 @@ header nav ul li {
 }
 
 #sales-main li {
-  border-bottom: dotted 2px #FFFFFF;
+  border-bottom: solid 2px #FFFFFF;
   padding: 4px 8px;
   text-align: center;
 }
@@ -39,13 +52,19 @@ header nav ul li {
   display: inline-block;
 }
 
+#sales-main section:nth-child(3n+5){
+margin-left: 15px;
+}
+
+
 h2 {
   color: #FFFFFF;
-  font-size: 2.5em;
+  font-size: 2.5rem;
   text-align: center;
+  margin-bottom: 20px;
 }
 h3 {
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 footer {
