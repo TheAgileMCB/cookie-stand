@@ -71,3 +71,15 @@ footer {
   margin-top: 30px;
   text-align: center;
 }
+/*-------------------------
+           Table
+-------------------------*/
+table {
+  border: solid 3px rgb(201, 165, 7);
+  margin: 0 auto;
+}
+
+th, td {
+  border: solid 1px rgb(201, 165, 7);
+  padding: 6px;
+}
