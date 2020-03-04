@@ -1,6 +1,16 @@
 'use strict';
 console.log('ready to rock');
 
+/////////////////////Constructor////////////////////////
+function Store(storeName, minCustomers, maxCustomers, unitsPerCustomer) {
+  this.storeName = storeName;
+  this.minCustomers = minCustomers;
+  this.maxCustomers = maxCustomers;
+  this.unitsPerCustomer = unitsPerCustomer;
+  this.customersPerHour = [];
+  this.cookiesPerHour = [];
+}
+
 //////////////////////New Stores/////////////////////////////
 var Seattle = new Store('Seattle', 23, 65, 6.3);
 var Tokyo = new Store('Tokyo', 3, 24, 1.2);
@@ -48,6 +58,17 @@ Lima.getCookies();
 console.log(Lima.customersPerHour);
 console.log(Lima.cookiesPerHour);
 
+// eachHour = [];
+// var customers = getCustomers()
+// var hourlyCookies = getCookies()
+// this.cookiesPerHour[i] = hourlyCookies;
+// this.totalCookies += hourlyCookies;
+// if (eachHour[i]) {
+//   eachHour[i] += hourlyCookies;
+// } else {
+//   eachHour[i] = hourlyCookies;
+// }
+
 ///////////////////////Render////////////////////////////////
 var salesTable = document.getElementById('sales-table');
 var headRow = document.createElement('tr');
@@ -81,9 +102,12 @@ Store.prototype.render = function() {
   }
 
   var totalCell = document.createElement('td');
-  totalCell.textContent = this.cookiesPerHour.reduce( function(a, b){
+    var total = this.cookiesPerHour.reduce( function(a, b){
     return a + b;
   });
+
+  this.cookiesPerHour.push(total);
+ totalCell.textContent = total;
 
   storeRow.appendChild(totalCell);
   salesTable.appendChild(storeRow);
@@ -99,19 +123,13 @@ totalFoot.setAttribute('scope', 'row');
 totalFoot.textContent = 'Totals';
 footRow.appendChild(totalFoot);
 
-for ( let i = 0; i < hours.length; i++ ) {
+for ( let i = 0; i < hours.length + 1; i++ ) {
   var storeFoot = document.createElement('td');
-  storeFoot.textContent = Seattle.cookiesPerHour[i] + Tokyo.cookiesPerHour[i] + Dubai.cookiesPerHour[i] + Paris.cookiesPerHour[i] + Lima.cookiesPerHour[i];
+  var hourlyTotal = 0;
+  for ( let j = 0; j < stores.length; j++ ) {
+    hourlyTotal += stores[j].cookiesPerHour[i];
+  }
+  storeFoot.textContent = hourlyTotal;
   footRow.appendChild(storeFoot);
   salesTable.appendChild(footRow);
-}
-
-/////////////////////Constructor////////////////////////
-function Store(storeName, minCustomers, maxCustomers, unitsPerCustomer) {
-  this.storeName = storeName;
-  this.minCustomers = minCustomers;
-  this.maxCustomers = maxCustomers;
-  this.unitsPerCustomer = unitsPerCustomer;
-  this.customersPerHour = [];
-  this.cookiesPerHour = [];
 }

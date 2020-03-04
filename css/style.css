@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background: linear-gradient(to bottom right, rgb(179, 24, 3), rgba(188, 89, 40, 1), rgb(160, 101, 72), rgba(188, 89, 40, 1));
   color: #FFFFFF;
@@ -46,6 +50,7 @@ a {
   border-radius: 30px;
   border: solid 6px rgba(201, 165, 7, 0.925);
   padding: 10px 20px 30px 20px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 #sales-main section, #sales-main p, #sales-main ul {
@@ -86,37 +91,34 @@ h3 {
 footer {
   margin-top: 30px;
   text-align: center;
+  font-size: 1.25rem;
 }
-footer section {
+#locations section {
   display: inline-block;
-  width: 300px;
-  height: 300px;
-  margin: 0 auto;
+  width: 19%
 
 }
 #locations {
   display:inline-block;
-  width: 300px;
-  height: 300px;
   margin: 0 auto;
 }
 
-#locations a {
-display: block;
-margin: 6px;
+footer section p {
+  margin: 7px;
+}
+#connect a + p {
+display: inline-block;
 }
 
-footer section a {
-  display:block;
-  margin: 6px;
-}
-footer section p {
-  margin: 6px;
+#footer h3 {
+  margin: 30px;
+  font-family: 'Trade Winds', cursive;
+
 }
 
 footer img {
   display: block;
-  margin: 0 auto;
+  margin: 60px auto;
 }
 
 main p {
@@ -141,14 +143,24 @@ p:nth-child(3) img:first-of-type {
 
 main section {
   clear: both;
+  overflow: hidden;
   margin-top: 10px;
 }
+
+a:hover {
+  font-family: 'Trade Winds', cursive;
+  background-color: rgb(201, 165, 7);
+  border: solid 2px #fff;
+  border-radius: 20px;
+  padding: 3px;
+  color: rgb(129, 49, 9);
 
 
 /*-------------------------
            Table
 -------------------------*/
-table {
+
+#sales-table {
   border: solid 3px rgb(201, 165, 7);
   margin: 0 auto;
 }
@@ -156,4 +168,10 @@ table {
 th, td {
   border: solid 1px rgb(201, 165, 7);
   padding: 6px;
+}
+
+td:hover {
+  font-family: 'Trade Winds', cursive;
+  background-color: rgb(201, 165, 7);
+  padding: 3px;
 }
