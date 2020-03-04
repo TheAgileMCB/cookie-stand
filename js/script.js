@@ -1,23 +1,18 @@
 'use strict';
 console.log('ready to rock');
 
-/////////////////////Global Variables//////////////////////
+//////////////////////New Stores/////////////////////////////
+var Seattle = new Store('Seattle', 23, 65, 6.3);
+var Tokyo = new Store('Tokyo', 3, 24, 1.2);
+var Dubai = new Store('Dubai', 11, 38, 3.7);
+var Paris = new Store('Paris', 20, 38, 2.3);
+var Lima = new Store('Lima', 2, 16, 4.6);
+
+/////////////////////Global Variables/////////////////////////
 var hours = ['6:00am','7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12:00pm', '1:00pm', '2:00pm', '3:00pm', '4:00pm', '5:00pm', '6:00pm', '7:00pm'];
+var stores = [Seattle, Tokyo, Dubai, Paris, Lima];
 
-/////////////////////Constructor////////////////////////
-function Store(storeName, minCustomers, maxCustomers, unitsPerCustomer) {
-  this.storeName = storeName;
-  this.minCustomers = minCustomers;
-  this.maxCustomers = maxCustomers;
-  this.unitsPerCustomer = unitsPerCustomer;
-  this.customersPerHour = [];
-  this.cookiesPerHour = [];
-  // this.totalCookies = this.getTotal();
-}
-
-////////////////////Functions///////////////////////////
-
-
+////////////////////Prototype Functions////////////////////////
 Store.prototype.getCustomers = function() {
   for(let i = 0; i < hours.length; i ++) {
     this.customersPerHour[i] = Math.floor(Math.random()*(this.maxCustomers - this.minCustomers + 1) + this.minCustomers);
@@ -30,17 +25,7 @@ Store.prototype.getCookies = function() {
   }
 };
 
-// Store.prototype.getTotal = function(){
-//   return (this.cookiesPerHour.reduce((a, b) => a+b));
-// };
-
-//////////////////////New Stores///////////////////////////
-var Seattle = new Store('Seattle', 23, 65, 6.3);
-var Tokyo = new Store('Tokyo', 3, 24, 1.2);
-var Dubai = new Store('Dubai', 11, 38, 3.7);
-var Paris = new Store('Paris', 20, 38, 2.3);
-var Lima = new Store('Lima', 2, 16, 4.6);
-
+//////////////////////////Function Calls/////////////////////////
 Seattle.getCustomers();
 Seattle.getCookies();
 console.log(Seattle.customersPerHour);
@@ -62,8 +47,6 @@ Lima.getCustomers();
 Lima.getCookies();
 console.log(Lima.customersPerHour);
 console.log(Lima.cookiesPerHour);
-
-var stores = [Seattle, Tokyo, Dubai, Paris, Lima];
 
 ///////////////////////Render////////////////////////////////
 var salesTable = document.getElementById('sales-table');
@@ -123,6 +106,12 @@ for ( let i = 0; i < hours.length; i++ ) {
   salesTable.appendChild(footRow);
 }
 
-// salesTable.appendChild(footRow);
-
-
+/////////////////////Constructor////////////////////////
+function Store(storeName, minCustomers, maxCustomers, unitsPerCustomer) {
+  this.storeName = storeName;
+  this.minCustomers = minCustomers;
+  this.maxCustomers = maxCustomers;
+  this.unitsPerCustomer = unitsPerCustomer;
+  this.customersPerHour = [];
+  this.cookiesPerHour = [];
+}
