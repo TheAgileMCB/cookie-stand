@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Caladea|Montserrat|Trade+Winds&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/68c8c390ab.js"></script>
 </head>
 
 <body>
@@ -27,15 +28,16 @@
   </header>
   <main id="main-content">
     <section id="about">
+      <h2>Our Story</h2>
+      <img src="images/seattlefish.jpg" alt="grandpa fishing">
+      <img src="images/seattlestreets.jpg" alt="the streets of Seattle">
       <p>
-        <img src="images/seattlefish.jpg" alt="grandpa fishing">
         Our story began simply enough--with one woman, one fishing pole, and one dream. Pat grew up in the mountains of
         southern Canada. She spent her weekends fishing with her grandfather. Her grandmother would always bake cookies
         for them to snack on on long stints in the placid lake waters of Canada and Washington. It was there that Pat's
         love for fish and sweets began. And wheels began turning.
       </p>
       <p>
-        <img src="images/seattlestreets.jpg" alt="the streets of Seattle">
         Pat went to school first as a software developer, but she found the logic confusing and fell behind in here
         classes. After failing out, she thought to pursue her true passion from youth: fishing. She became a
         semi-professional fly fisher, winning several state and regional tournaments. But the vision of salty, savory,
@@ -43,11 +45,36 @@
         into Pat's Salmon Cookies!
       </p>
       <p>
-        <img src="images/seattleslice.jpg" alt="Our salmon is sliced fresh!">
         Now, Pat shares her love of fish and confections with Seattle and the world beyond! With new locations opening
         all around the world. Try them! You'll love them!
       </p>
-      <img src="images/salmoncookies.jpg" alt="colorful salmon cookies and fresh raspberries">
+      <img src="images/seattleslice.jpg" alt="Our salmon is sliced fresh!">
+    </section>
+    <section id="photobook">
+    <div class="row">
+      <div class="column">
+        <img src="images/cutter.jpeg" alt="fish cookie cutter" onclick="myFunction(this);">
+      </div>
+      <div class="column">
+        <img src="images/family.jpg" alt="a family" onclick="myFunction(this);">
+      </div>
+      <div class="column">
+        <img src="images/fish.jpg" alt="fish" onclick="myFunction(this);">
+      </div>
+      <div class="column">
+        <img src="images/frosted-cookie.jpg" alt="frosted cookie" onclick="myFunction(this);">
+      </div>
+      <div class="column">
+        <img src="images/shirt.jpg" alt="a fish shirt" onclick="myFunction(this);">
+      </div>
+    </div>
+    <div class="container">
+      <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
+      <img id="expandedImg"
+      style="width:40%">
+      <div id="imgtext"></div>
+    </div>
     </section>
   </main>
   <footer id="footer">
@@ -87,11 +114,12 @@
     
     <section id="connect">
       <h3>Connect</h3>
-      <a href="https://www.facebook.com">Facebook</a>
-      <a href="mailto:salmonmanpat@aol.com">Email</a>
-      <p>Phone: 555/555-FISH</p>
+      <a href="mailto:salmongalpat@aol.com"><i class="fas fa-envelope-square" aria-hidden="true"></i><span class="sr-only">salmongalpat@aol.com</span></a>
+          <a href="https://github.com/mcbarnhart/mcbarnhart.github.io" target="_blank"><i class="fab fa-github-square" aria-hidden="true"></i><span class="sr-only">Github</span></a>
+          <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i><span class="sr-only">Instagram</span></a>
+          <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin" aria-hidden="true"></i><span class="sr-only">LinkedIn</span></a>
+          <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square" aria-hidden="true"></i><span class="sr-only">Facebook</span></a>
     </section>
-    <img src="images/salmon.png" alt="this is a salmon">
 
   </footer>
   <script src="js/script.js"></script>
