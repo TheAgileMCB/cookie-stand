@@ -43,7 +43,6 @@ var Lima = new Store('Lima', 2, 16, 4.6);
 
 Seattle.getCustomers();
 Seattle.getCookies();
-Seattle.getTotal();
 console.log(Seattle.customersPerHour);
 console.log(Seattle.cookiesPerHour);
 console.log(Seattle.totalCookies);
@@ -73,6 +72,7 @@ var headRowBlank = document.createElement('th');
 headRowBlank.setAttribute('scope', 'row');
 headRowBlank.textContent = '';
 headRow.appendChild(headRowBlank);
+
 for ( let i = 0; i < hours.length; i++ ) {
   var hourHead = document.createElement('th');
   hourHead.setAttribute('scope', 'col');
@@ -80,6 +80,11 @@ for ( let i = 0; i < hours.length; i++ ) {
   headRow.appendChild(hourHead);
   salesTable.appendChild(headRow);
 }
+
+var totalHead = document.createElement('th');
+totalHead.setAttribute('scope', 'col');
+totalHead.textContent = 'Daily Location Totals';
+headRow.appendChild(totalHead);
 
 Store.prototype.render = function() {
   var storeRow = document.createElement('tr');
@@ -89,18 +94,31 @@ Store.prototype.render = function() {
   for ( let i = 0; i < hours.length; i++ ) {
     var salesCell = document.createElement('td');
     salesCell.textContent = this.cookiesPerHour[i];
-    storeRow.appendChild(salesCell);
+    var totalCell = document.createElement('td');
+    totalCell.textContent = this.cookiesPerHour[0] + this.cookiesPerHour[1] + this.cookiesPerHour[2] + this.cookiesPerHour[3] + this.cookiesPerHour[4] + this.cookiesPerHour[5] + this.cookiesPerHour[6] + this.cookiesPerHour[7] + this.cookiesPerHour[8] + this.cookiesPerHour[9] + this.cookiesPerHour[10] + this.cookiesPerHour[11] + this.cookiesPerHour[12] + this.cookiesPerHour[13];
+    storeRow.appendChild(salesCell); 
   }
+  storeRow.appendChild(totalCell);
   salesTable.appendChild(storeRow);
 };
-
-// for ( let i = 0; i < hours.length; i++ ) {
-//   var totalFoot = document.createElement('th');
-//   totalFoot.textContent = ;
-//   footRow.appendChild(totalFoot);
-//   storeTable.appendChild(footRow);
-// }
 
 for( let i = 0; i < stores.length; i++ ) {
   stores[i].render();
 }
+
+var footRow = document.createElement('tr');
+var totalFoot = document.createElement('th');
+totalFoot.setAttribute('scope', 'row');
+totalFoot.textContent = 'Totals';
+footRow.appendChild(totalFoot);
+
+for ( let i = 0; i < hours.length; i++ ) {
+  var storeFoot = document.createElement('td');
+  storeFoot.textContent = Seattle.cookiesPerHour[i] + Tokyo.cookiesPerHour[i] + Dubai.cookiesPerHour[i] + Paris.cookiesPerHour[i] + Lima.cookiesPerHour[i];
+  footRow.appendChild(storeFoot);
+  salesTable.appendChild(footRow);
+}
+
+// salesTable.appendChild(footRow);
+
+
