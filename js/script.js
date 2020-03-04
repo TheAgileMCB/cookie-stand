@@ -12,6 +12,7 @@ function Store(storeName, minCustomers, maxCustomers, unitsPerCustomer) {
   this.unitsPerCustomer = unitsPerCustomer;
   this.customersPerHour = [];
   this.cookiesPerHour = [];
+  // this.totalCookies = this.getTotal();
 }
 
 ////////////////////Functions///////////////////////////
@@ -29,6 +30,10 @@ Store.prototype.getCookies = function() {
   }
 };
 
+// Store.prototype.getTotal = function(){
+//   return (this.cookiesPerHour.reduce((a, b) => a+b));
+// };
+
 //////////////////////New Stores///////////////////////////
 var Seattle = new Store('Seattle', 23, 65, 6.3);
 var Tokyo = new Store('Tokyo', 3, 24, 1.2);
@@ -38,8 +43,10 @@ var Lima = new Store('Lima', 2, 16, 4.6);
 
 Seattle.getCustomers();
 Seattle.getCookies();
+Seattle.getTotal();
 console.log(Seattle.customersPerHour);
 console.log(Seattle.cookiesPerHour);
+console.log(Seattle.totalCookies);
 Tokyo.getCustomers();
 Tokyo.getCookies();
 console.log(Tokyo.customersPerHour);
@@ -73,12 +80,6 @@ for ( let i = 0; i < hours.length; i++ ) {
   headRow.appendChild(hourHead);
   salesTable.appendChild(headRow);
 }
-// for ( let i = 0; i < hours.length; i++ ) {
-//   var totalFoot = document.createElement('th');
-//   totalFoot.textContent = ;
-//   footRow.appendChild(totalFoot);
-//   storeTable.appendChild(footRow);
-// }
 
 Store.prototype.render = function() {
   var storeRow = document.createElement('tr');
@@ -89,12 +90,16 @@ Store.prototype.render = function() {
     var salesCell = document.createElement('td');
     salesCell.textContent = this.cookiesPerHour[i];
     storeRow.appendChild(salesCell);
-
   }
   salesTable.appendChild(storeRow);
-
-  
 };
+
+// for ( let i = 0; i < hours.length; i++ ) {
+//   var totalFoot = document.createElement('th');
+//   totalFoot.textContent = ;
+//   footRow.appendChild(totalFoot);
+//   storeTable.appendChild(footRow);
+// }
 
 for( let i = 0; i < stores.length; i++ ) {
   stores[i].render();
