@@ -94,10 +94,14 @@ Store.prototype.render = function() {
   for ( let i = 0; i < hours.length; i++ ) {
     var salesCell = document.createElement('td');
     salesCell.textContent = this.cookiesPerHour[i];
-    var totalCell = document.createElement('td');
-    totalCell.textContent = this.cookiesPerHour[0] + this.cookiesPerHour[1] + this.cookiesPerHour[2] + this.cookiesPerHour[3] + this.cookiesPerHour[4] + this.cookiesPerHour[5] + this.cookiesPerHour[6] + this.cookiesPerHour[7] + this.cookiesPerHour[8] + this.cookiesPerHour[9] + this.cookiesPerHour[10] + this.cookiesPerHour[11] + this.cookiesPerHour[12] + this.cookiesPerHour[13];
-    storeRow.appendChild(salesCell); 
+    storeRow.appendChild(salesCell);
   }
+
+  var totalCell = document.createElement('td');
+  totalCell.textContent = this.cookiesPerHour.reduce( function(a, b){
+    return a + b;
+  });
+
   storeRow.appendChild(totalCell);
   salesTable.appendChild(storeRow);
 };
