@@ -119,12 +119,32 @@ footer img {
   margin: 0 auto;
 }
 
-p {
+main p {
   text-align: left;
-  max-width: 50%;
-  margin: 10px auto 10px;
+  max-width: 100%;
+  margin: 50px auto 50px;
   font-size: 1.5rem;
+  line-height: 30px;
 }
+p img:first-of-type {
+  width: 350px;
+}
+p:first-of-type img {
+  float: left;
+}
+p:nth-child(2) img{
+  float: right;
+}
+p:nth-child(3) img:first-of-type {
+  float: left;
+}
+
+main section {
+  clear: both;
+  margin-top: 10px;
+}
+
+
 /*-------------------------
            Table
 -------------------------*/
