@@ -196,9 +196,31 @@ td:hover {
 }
 
 /*------------------------------
+        New Store Form
+-------------------------------*/
+#new-store{
+  /* text-align: center; */
+  font-size: 1.25em;
+  background-color: rgb(129, 49, 9);
+  border-radius: 30px;
+  border: solid 6px rgba(201, 165, 7, 0.925);
+  padding: 10px 20px 30px 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.formMin .formMax .formAvg {
+display:block;
+text-align: left;
+}
+
+legend {
+  text-align: center;
+}
+
+
+/*------------------------------
           Photobook
 ------------------------------*/
-
 #photobook {
   /* text-align: center; */
   font-size: 1.25em;
