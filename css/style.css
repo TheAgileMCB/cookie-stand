@@ -1,3 +1,6 @@
+/*------------------------
+      Global Styles
+------------------------*/
 * {
   box-sizing: border-box;
 }
@@ -8,66 +11,9 @@ body {
   font-family: 'Caladea', serif;
 }
 
-header {
-  margin-bottom: 30px;
-  text-align: center;
-  font-size: 1.5rem;
-}
-
-header nav ul li {
-  display: inline-block;
-  padding: 10px;
-  margin-top: 20px;
-  background-color: rgb(129, 49, 9);
-  border-radius: 30px;
-  border: solid 6px rgba(201, 165, 7, 0.925);
-
-}
-header img {
-  max-width: 100%;
-  margin-bottom: 20px;
-}
-
 a {
   text-decoration: none;
   color: #FFFFFF;
-}
-
-#main-content {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-#sales-main {
-  text-align: center;
-  font-size: 1.25em;
-  background-color: rgb(129, 49, 9);
-  border-radius: 30px;
-  border: solid 6px rgba(201, 165, 7, 0.925);
-  padding: 10px 20px 30px 20px;
-  font-family: 'Montserrat', sans-serif;
-}
-
-#sales-main section, #sales-main p, #sales-main ul {
-  border: solid 2px #FFFFFF;
-}
-
-#sales-main p {
-  padding: 8px;
-}
-
-#sales-main li {
-  border-bottom: solid 2px #FFFFFF;
-  padding: 4px 8px;
-  text-align: center;
-}
-
-#sales-main section {
-  display: inline-block;
-}
-
-#sales-main section:nth-child(3n+5){
-margin-left: 15px;
 }
 
 h1 {
@@ -88,11 +34,43 @@ h3 {
   font-size: 2rem;
 }
 
+main p {
+  text-align: left;
+  max-width: 70%;
+  margin: 50px auto 50px;
+  font-size: 1.5rem;
+  line-height: 30px;
+}
+
+/*-------------------------
+    Header and Footer
+--------------------------*/
+header {
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+header img {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+Header nav ul li {
+  display: inline-block;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: rgb(129, 49, 9);
+  border-radius: 30px;
+  border: solid 6px rgb(201, 165, 7);
+  }  
+
 footer {
   margin-top: 30px;
   text-align: center;
   font-size: 1.25rem;
 }
+
 #locations section {
   display: inline-block;
   width: 19%
@@ -113,34 +91,6 @@ display: inline-block;
 #footer h3 {
   margin: 30px;
   font-family: 'Trade Winds', cursive;
-
-}
-
-main p {
-  text-align: left;
-  max-width: 70%;
-  margin: 50px auto 50px;
-  font-size: 1.5rem;
-  line-height: 30px;
-}
-
-#about img:first-of-type {
-  float: left;
-  width: 300px;
-}
-#about img:nth-child(3) {
-  float: right;
-  width: 400px;
-}
-#about img:nth-child(7) {
-  float: inline-end;
-  width: 300px;
-}
-
-main section {
-  clear: both;
-  overflow: hidden;
-  margin-top: 10px;
 }
 
 footer a:hover {
@@ -164,6 +114,33 @@ footer a:hover {
   padding-top: 135px;
 }
 
+/*---------------------------
+        Client Page
+----------------------------*/
+#main-content {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#about img:first-of-type {
+  float: left;
+  width: 300px;
+}
+#about img:nth-child(3) {
+  float: right;
+  width: 400px;
+}
+#about img:nth-child(7) {
+  float: inline-end;
+  width: 300px;
+}
+
+main section {
+  clear: both;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
 .construction-content h1 {
 font-size: 7rem;
 margin: 100px;
@@ -179,9 +156,29 @@ text-transform: uppercase;
 }
 
 /*-------------------------
-           Table
+        Sales Table
 -------------------------*/
+#sales-main {
+  text-align: center;
+  font-size: 1.25em;
+  background-color: rgb(129, 49, 9);
+  border-radius: 30px;
+  border: solid 6px rgba(201, 165, 7, 0.925);
+  padding: 10px 20px 30px 20px;
+  font-family: 'Montserrat', sans-serif;
+}
 
+#sales-main p {
+  padding: 8px;
+}
+
+#sales-main section {
+  display: inline-block;
+}
+
+#sales-main section:nth-child(3n+5){
+margin-left: 15px;
+} 
 #sales-table {
   border: solid 3px rgb(201, 165, 7);
   margin: 0 auto;
