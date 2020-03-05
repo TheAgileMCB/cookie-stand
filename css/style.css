@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background: linear-gradient(to bottom right, rgb(179, 24, 3), rgba(188, 89, 40, 1), rgb(160, 101, 72), rgba(188, 89, 40, 1));
   color: #FFFFFF;
@@ -8,11 +12,6 @@ header {
   margin-bottom: 30px;
   text-align: center;
   font-size: 1.5rem;
-}
-
-header h1 {
-color: #FFFFFF;
-font-size: 4.5rem;
 }
 
 header nav ul li {
@@ -46,6 +45,7 @@ a {
   border-radius: 30px;
   border: solid 6px rgba(201, 165, 7, 0.925);
   padding: 10px 20px 30px 20px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 #sales-main section, #sales-main p, #sales-main ul {
@@ -71,13 +71,18 @@ margin-left: 15px;
 }
 
 h1 {
+  font-size: 5rem;
   font-family: 'Trade Winds', cursive;
+  margin-bottom: 20px;
 }
 h2 {
   color: #FFFFFF;
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 20px;
+  margin-top: 50px;
+  font-family: 'Trade Winds', cursive;
+
 }
 h3 {
   font-size: 2rem;
@@ -86,69 +91,98 @@ h3 {
 footer {
   margin-top: 30px;
   text-align: center;
+  font-size: 1.25rem;
 }
-footer section {
+#locations section {
   display: inline-block;
-  width: 300px;
-  height: 300px;
-  margin: 0 auto;
+  width: 19%
 
 }
 #locations {
   display:inline-block;
-  width: 300px;
-  height: 300px;
   margin: 0 auto;
 }
 
-#locations a {
-display: block;
-margin: 6px;
-}
-
-footer section a {
-  display:block;
-  margin: 6px;
-}
 footer section p {
-  margin: 6px;
+  margin: 7px;
+}
+#connect a + p {
+display: inline-block;
 }
 
-footer img {
-  display: block;
-  margin: 0 auto;
+#footer h3 {
+  margin: 30px;
+  font-family: 'Trade Winds', cursive;
+
 }
 
 main p {
   text-align: left;
-  max-width: 100%;
+  max-width: 70%;
   margin: 50px auto 50px;
   font-size: 1.5rem;
   line-height: 30px;
 }
-p img:first-of-type {
-  width: 350px;
-}
-p:first-of-type img {
+
+#about img:first-of-type {
   float: left;
+  width: 300px;
 }
-p:nth-child(2) img{
+#about img:nth-child(3) {
   float: right;
+  width: 400px;
 }
-p:nth-child(3) img:first-of-type {
-  float: left;
+#about img:nth-child(7) {
+  float: inline-end;
+  width: 300px;
 }
 
 main section {
   clear: both;
+  overflow: hidden;
   margin-top: 10px;
 }
 
+footer a:hover {
+  font-family: 'Trade Winds', cursive;
+  background-color: rgb(201, 165, 7);
+  border: solid 2px #fff;
+  border-radius: 30px;
+  padding: 3px;
+  color: rgb(129, 49, 9);
+}
+
+#connect {
+  background-image: url("../images/salmon.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-bottom: 150px;
+  font-size: 3rem;
+  word-spacing:15px;  
+}
+#connect h3 {
+  padding-top: 135px;
+}
+
+.construction-content h1 {
+font-size: 7rem;
+margin: 100px;
+text-align: center;
+text-transform: uppercase;
+}
+
+.construction-content h2 {
+  font-size: 5rem;
+  text-align: center;
+  margin: 80px;
+  text-transform: uppercase;
+}
 
 /*-------------------------
            Table
 -------------------------*/
-table {
+
+#sales-table {
   border: solid 3px rgb(201, 165, 7);
   margin: 0 auto;
 }
@@ -156,4 +190,82 @@ table {
 th, td {
   border: solid 1px rgb(201, 165, 7);
   padding: 6px;
+}
+
+td:hover {
+  font-family: 'Trade Winds', cursive;
+  background-color: rgb(201, 165, 7);
+  padding: 3px;
+}
+
+/*------------------------------
+          Photobook
+------------------------------*/
+
+#photobook {
+  /* text-align: center; */
+  font-size: 1.25em;
+  background-color: rgb(129, 49, 9);
+  border-radius: 30px;
+  border: solid 6px rgba(201, 165, 7, 0.925);
+  padding: 10px 20px 30px 20px;
+  margin-top: 100px;
+}
+
+.column {
+float: left;
+width: 20%;
+padding: 10px;
+}
+.column img {
+  opacity: 0.8;
+  width: 150px;
+  cursor: pointer;
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+  position: relative;
+  display: none;
+}
+
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: #fff;
+  font-size: 20px;
+}
+
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #fff;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+/*-----------------------------
+      onclick styles
+-----------------------------*/
+
+.onclick body {
+  background: linear-gradient (to bottom right, rgb(35, 46, 109), rgb(27, 132, 230))
+}
+.onlclick hi, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+.onclick #photobook {
+  background-color: rgb(88, 87, 86);
+  border: solid 6px rgba(0, 247, 255, 0.925);
 }
