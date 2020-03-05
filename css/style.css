@@ -14,11 +14,6 @@ header {
   font-size: 1.5rem;
 }
 
-header h1 {
-color: #FFFFFF;
-font-size: 4.5rem;
-}
-
 header nav ul li {
   display: inline-block;
   padding: 10px;
@@ -76,13 +71,17 @@ margin-left: 15px;
 }
 
 h1 {
+  font-size: 5rem;
   font-family: 'Trade Winds', cursive;
+  margin-bottom: 20px;
 }
 h2 {
   color: #FFFFFF;
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 20px;
+  font-family: 'Trade Winds', cursive;
+
 }
 h3 {
   font-size: 2rem;
@@ -115,11 +114,6 @@ display: inline-block;
   font-family: 'Trade Winds', cursive;
 
 }
-
-/* footer img {
-  display: block;
-  margin: 60px auto;
-} */
 
 main p {
   text-align: left;
