@@ -80,6 +80,7 @@ h2 {
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 20px;
+  margin-top: 50px;
   font-family: 'Trade Winds', cursive;
 
 }
@@ -163,6 +164,20 @@ footer a:hover {
   padding-top: 135px;
 }
 
+.construction-content h1 {
+font-size: 7rem;
+margin: 100px;
+text-align: center;
+text-transform: uppercase;
+}
+
+.construction-content h2 {
+  font-size: 5rem;
+  text-align: center;
+  margin: 80px;
+  text-transform: uppercase;
+}
+
 /*-------------------------
            Table
 -------------------------*/
@@ -238,4 +253,19 @@ padding: 10px;
   color: #fff;
   font-size: 35px;
   cursor: pointer;
+}
+
+/*-----------------------------
+      onclick styles
+-----------------------------*/
+
+.onclick body {
+  background: linear-gradient (to bottom right, rgb(35, 46, 109), rgb(27, 132, 230))
+}
+.onlclick hi, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+.onclick #photobook {
+  background-color: rgb(88, 87, 86);
+  border: solid 6px rgba(0, 247, 255, 0.925);
 }
