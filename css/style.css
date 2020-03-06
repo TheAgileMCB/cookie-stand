@@ -158,6 +158,10 @@ text-transform: uppercase;
 /*-------------------------
         Sales Table
 -------------------------*/
+h1 {
+  margin-top: 30px;
+}
+
 #sales-main {
   text-align: center;
   font-size: 1.25em;
@@ -204,22 +208,31 @@ td:hover {
   background-color: rgb(129, 49, 9);
   border-radius: 30px;
   border: solid 6px rgba(201, 165, 7, 0.925);
-  padding: 10px 20px 30px 20px;
+  padding: 20px 0px;
   font-family: 'Montserrat', sans-serif;
+  margin-top: 40px;
   
 }
 
 .formMin .formMax .formAvg {
   display:block;
-  text-align: left;
+  text-align: left !important;
 }
 
 legend {
   text-align: center;
+  margin: 20px;
+}
+
+form {
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
 }
 
 form button {
-  text-align: center;
+  margin-top: 20px;
+  margin: 20px auto 0;
 }
 
 
