@@ -22,11 +22,43 @@
     </nav>
 
   </header>
-  <main id="sales-main">
-    <h2>Sales Per Hour Report(in Cookies)</h2>
-    <table id="sales-table">
+  <main>
+    <section id="sales-main">
+      <h2>Sales Per Hour Report(in Cookies)</h2>
+      <table id="sales-table">
 
-    </table>
+      </table>
+    </section>
+    <section>
+      <form id="new-store">
+        <fieldset>
+          <legend>
+            <h3>Input New Store Data</h3>
+          </legend>
+          <label for="storeName">Store Location</label>
+          <input id="storeName" type="text" required />
+        </fieldset>
+        <fieldset>
+          <div class="formMin">
+          <label for="minCustomers">Minimum Hourly Visits</label>
+          <input id="minCustomers" type="number" required />
+          </div>
+          <div class="formMax"></div>
+          <label for="maxCustomers">Maximum Hourly Visits</label>
+          <input id="maxCustomers" type="number" required />
+          </div>
+          <div class="formAvg">
+          <label for="unitsPerCustomer">Average Units Per Customer</label>
+          <input id="unitsPerCustomer" type="number" step="0.1" required />
+          </div>
+        </fieldset>
+
+        <button type="reset" value="reset">Cast again</button>
+        <button>Reel it in!</button>
+
+      </form>
+    </section>
+
   </main>
   <footer id="footer">
     <div id="locations">
