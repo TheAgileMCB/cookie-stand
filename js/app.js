@@ -3,8 +3,8 @@
 /////////////////////Constructor////////////////////////
 function Store(storeName, minCustomers, maxCustomers, unitsPerCustomer) {
   this.storeName = storeName;
-  this.minCustomers = minCustomers;
-  this.maxCustomers = maxCustomers;
+  this.minCustomers = parseInt(minCustomers);
+  this.maxCustomers = parseInt(maxCustomers);
   this.unitsPerCustomer = unitsPerCustomer;
   this.customersPerHour = [];
   this.cookiesPerHour = [];
@@ -22,7 +22,7 @@ Store.prototype.getCustomers = function() {
 
 Store.prototype.getCookies = function() {
   for(let i = 0; i < hours.length; i ++) {
-    this.cookiesPerHour[i] = Math.ceil(this.customersPerHour[i] * this.unitsPerCustomer);
+    this.cookiesPerHour[i] = Math.floor(this.customersPerHour[i] * this.unitsPerCustomer);
   }
 };
 
@@ -41,7 +41,7 @@ function renderHeader(){
     headRow.appendChild(hourHead);
     salesTable.appendChild(headRow);
   }
-  
+
   var totalHead = document.createElement('th');
   totalHead.textContent = 'Daily Location Totals';
   headRow.appendChild(totalHead);
@@ -157,3 +157,7 @@ function handleFormSubmission(event){
 
 var formElement = document.getElementById('new-store');
 formElement.addEventListener('submit', handleFormSubmission);
+
+// for(let i=0;i<stores.length;i++) {
+//   if(textEntered === stores[i]) 
+// }
