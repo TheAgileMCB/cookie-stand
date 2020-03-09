@@ -5,7 +5,7 @@ function Store(storeName, minCustomers, maxCustomers, unitsPerCustomer) {
   this.storeName = storeName;
   this.minCustomers = parseInt(minCustomers);
   this.maxCustomers = parseInt(maxCustomers);
-  this.unitsPerCustomer = unitsPerCustomer;
+  this.unitsPerCustomer = parseInt(unitsPerCustomer);
   this.customersPerHour = [];
   this.cookiesPerHour = [];
 }
