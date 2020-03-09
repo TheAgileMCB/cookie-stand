@@ -191,6 +191,7 @@ margin-left: 15px;
 th, td {
   border: solid 1px rgb(201, 165, 7);
   padding: 6px;
+  vertical-align: middle;
 }
 
 td:hover {
@@ -234,7 +235,6 @@ form button {
   margin-top: 20px;
   margin: 20px auto 0;
 }
-
 
 /*------------------------------
           Photobook
